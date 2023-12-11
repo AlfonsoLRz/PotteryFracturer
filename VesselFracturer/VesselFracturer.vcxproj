@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Libraries\MagicaVoxel_File_Writer\VoxWriter.h" />
+    <ClInclude Include="Libraries\progressbar.hpp" />
+    <ClInclude Include="Libraries\simplify\Simplify.h" />
+    <ClInclude Include="Source\DataStructures\RegularGrid.h" />
+    <ClInclude Include="Source\Fracturer\FloodFracturer.h" />
+    <ClInclude Include="Source\Fracturer\Fracturer.h" />
+    <ClInclude Include="Source\Fracturer\Seeder.h" />
+    <ClInclude Include="Source\Geometry\3D\AABB.h" />
+    <ClInclude Include="Source\Geometry\3D\PointCloud3D.h" />
+    <ClInclude Include="Source\Geometry\General\Adapter.h" />
+    <ClInclude Include="Source\Geometry\General\BasicOperations.h" />
+    <ClInclude Include="Source\Graphics\Application\Fragmentation.h" />
+    <ClInclude Include="Source\Graphics\Application\Window.h" />
+    <ClInclude Include="Source\Graphics\Core\AssimpModel.h" />
+    <ClInclude Include="Source\Graphics\Core\ColorUtilities.h" />
+    <ClInclude Include="Source\Graphics\Core\ComputeShader.h" />
+    <ClInclude Include="Source\Graphics\Core\FractureParameters.h" />
+    <ClInclude Include="Source\Graphics\Core\FragmentationProcedure.h" />
+    <ClInclude Include="Source\Graphics\Core\GraphicsCoreEnumerations.h" />
+    <ClInclude Include="Source\Graphics\Core\Model3D.h" />
+    <ClInclude Include="Source\Graphics\Core\MarchingCubes.h" />
+    <ClInclude Include="Source\Graphics\Core\ShaderList.h" />
+    <ClInclude Include="Source\Graphics\Core\ShaderProgram.h" />
+    <ClInclude Include="Source\Graphics\Core\Tetravoxelizer.h" />
+    <ClInclude Include="Source\PrecompiledHeaders\stdafx.h" />
+    <ClInclude Include="Source\Utilities\ChronoUtilities.h" />
+    <ClInclude Include="Source\Utilities\FileManagement.h" />
+    <ClInclude Include="Source\Utilities\HaltonEnum.h" />
+    <ClInclude Include="Source\Utilities\HaltonSampler.h" />
+    <ClInclude Include="Source\Utilities\RandomUtilities.h" />
+    <ClInclude Include="Source\Utilities\Singleton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Libraries\MagicaVoxel_File_Writer\VoxWriter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source\DataStructures\RegularGrid.cpp" />
+    <ClCompile Include="Source\Fracturer\FloodFracturer.cpp" />
+    <ClCompile Include="Source\Fracturer\Seeder.cpp" />
+    <ClCompile Include="Source\Geometry\3D\AABB.cpp" />
+    <ClCompile Include="Source\Geometry\3D\PointCloud3D.cpp" />
+    <ClCompile Include="Source\Graphics\Application\Fragmentation.cpp" />
+    <ClCompile Include="Source\Graphics\Application\Window.cpp" />
+    <ClCompile Include="Source\Graphics\Core\AssimpModel.cpp" />
+    <ClCompile Include="Source\Graphics\Core\ComputeShader.cpp" />
+    <ClCompile Include="Source\Graphics\Core\Model3D.cpp" />
+    <ClCompile Include="Source\Graphics\Core\MarchingCubes.cpp" />
+    <ClCompile Include="Source\Graphics\Core\ShaderList.cpp" />
+    <ClCompile Include="Source\Graphics\Core\ShaderProgram.cpp" />
+    <ClCompile Include="Source\Graphics\Core\Tetravoxelizer.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\PrecompiledHeaders\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\2D\blurSSAOShader-frag.glsl" />
+    <None Include="Assets\Shaders\2D\blurSSAOShader-vert.glsl" />
+    <None Include="Assets\Shaders\2D\ssaoShader-frag.glsl" />
+    <None Include="Assets\Shaders\2D\ssaoShader-vert.glsl" />
+    <None Include="Assets\Shaders\Compute\BIM\iotaBuffer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\endLoopComputations-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Collision\computeBVHCollision-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Collision\computeMeshBVHCollision-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Collision\fillRegularGrid-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\assignFaceCluster-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\assignPointCluster-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\buildMarchingCubesFaces-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\buildRegularGrid-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\computeMortonCodes-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\countQuadrantOccupancy-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\countVoxelTriangle-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\detectBoundaries-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\distance.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\erodeGrid-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\fillRegularGrid-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\fillRegularGridVertical-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\findSameVertices_01-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\findSameVertices_02-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\finishFill-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\finishLaplacianSmoothing-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\floodFracturer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\laplacianSmoothing-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\marchingCubes-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\markBoundaryTriangles-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\naiveFracturer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\removeIsolatedRegions-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\resetBuffer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\resetLaplacianBuffer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\selectVoxelTriangle-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\undoMask-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\voxel.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\voxelMask.glsl" />
+    <None Include="Assets\Shaders\Compute\Fracturer\voxelStructs.glsl" />
+    <None Include="Assets\Shaders\Compute\Generic\resetBufferIndex-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\computeFaceAABB-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\computeNormals-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\sampler-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\PlanarSurface\planarSurfaceFaces-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\RadixSort\bitMask-radixSort-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\buildClusterBuffer-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\clusterMerging-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Group\computeGroupAABB-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\computeMortonCodes-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\computeTangents_1-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\computeTangents_2-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\PrefixScan\downSweep-prefixScan-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\findBestNeighbor-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\modelMeshGeneration-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Model\modelApplyModelMatrix-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\PlanarSurface\planarSurfaceGeometryTopology-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\BVHGeneration\reallocateClusters-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\RadixSort\reallocateIndices-radixSort-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\PrefixScan\reduce-prefixScan-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\PrefixScan\resetLastPosition-prefixScan-comp.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\colorHSV.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\computeAxes.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\constraints.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\intersections.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\modelStructs.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\random.glsl" />
+    <None Include="Assets\Shaders\Compute\Templates\rotation.glsl" />
+    <None Include="Assets\Shaders\Filters\blur-frag.glsl" />
+    <None Include="Assets\Shaders\Filters\blur-vert.glsl" />
+    <None Include="Assets\Shaders\Filters\normalMapShader-frag.glsl" />
+    <None Include="Assets\Shaders\Filters\normalMapShader-vert.glsl" />
+    <None Include="Assets\Shaders\Lines\vertexNormal-frag.glsl" />
+    <None Include="Assets\Shaders\Lines\vertexNormal-geo.glsl" />
+    <None Include="Assets\Shaders\Lines\vertexNormal-vert.glsl" />
+    <None Include="Assets\Shaders\Lines\wireframe-frag.glsl" />
+    <None Include="Assets\Shaders\Lines\wireframe-vert.glsl" />
+    <None Include="Assets\Shaders\Points\pointCloud-frag.glsl" />
+    <None Include="Assets\Shaders\Points\pointCloud-vert.glsl" />
+    <None Include="Assets\Shaders\Points\pointCloudHeight-frag.glsl" />
+    <None Include="Assets\Shaders\Points\pointCloudHeight-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\clusterShader-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\clusterShader-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\debugQuad-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\debugQuad-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceShadowsShader-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceShadowsShader-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMesh-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMesh-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMeshNormal-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMeshNormal-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMeshPosition-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\multiInstanceTriangleMeshPosition-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\shadowsShader-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\shadowsShader-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMesh-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMesh-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshGroup-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshGroup-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshNormal-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshNormal-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshPosition-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\triangleMeshPosition-vert.glsl" />
+    <None Include="Assets\Shaders\Triangles\uniformTriangleMesh-frag.glsl" />
+    <None Include="Assets\Shaders\Triangles\uniformTriangleMesh-vert.glsl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{CD460397-2919-4AC7-8319-12E8F41BDC3A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BIMScanner</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source;Source/PrecompiledHeaders;%userprofile%/Desktop/Libraries/glew/include;%userprofile%/Desktop/Libraries/glm;%userprofile%/Desktop/Libraries/glfw/include;%userprofile%/Desktop/Libraries/FastNoise2/include;Libraries/;Libraries/lodepng;Libraries/imgui;Libraries/imgui/examples;Libraries/implot;Libraries/tinyply;Libraries/objloader;Libraries/spline;Libraries/imfiledialog</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%userprofile%/Desktop/Libraries/glew/lib/Release/x64;%userprofile%/Desktop/Libraries/glfw/lib-vc2019;%userprofile%/Desktop/Libraries/FastNoise2/lib;D:\PDAL-master\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;FastNoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source;Source/PrecompiledHeaders;Libraries/;Libraries/lodepng;Libraries/imgui;Libraries/imgui/examples;Libraries/implot;Libraries/objloader;Libraries/spline;Libraries/imfiledialog;Libraries/MagicaVoxel_File_Writer;Libraries/simplify;Libraries/tinymesh/src/tinymesh/;Libraries/vox/</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%userprofile%/Desktop/Libraries/glew/lib/Release/x64;%userprofile%/Desktop/Libraries/glfw/lib-vc2019;%userprofile%/Desktop/Libraries/FastNoise2/lib;D:\PDAL-master\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source;Source/PrecompiledHeaders;Libraries/;Libraries/lodepng;Libraries/imgui;Libraries/imgui/examples;Libraries/implot;Libraries/tinyply;Libraries/objloader;Libraries/spline;Libraries/imfiledialog;Libraries/MagicaVoxel_File_Writer;Libraries/simplify</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%userprofile%/Desktop/Libraries/glew/lib/Release/x64;%userprofile%/Desktop/Libraries/glfw/lib-vc2019;%userprofile%/Desktop/Libraries/FastNoise2/lib;D:\PDAL-master\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;FastNoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source;Source/PrecompiledHeaders;Libraries/;Libraries/lodepng;Libraries/imgui;Libraries/imgui/examples;Libraries/implot;Libraries/objloader;Libraries/spline;Libraries/imfiledialog;Libraries/MagicaVoxel_File_Writer;Libraries/simplify;Libraries/tinymesh/src/tinymesh/;Libraries/vox/</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%userprofile%/Desktop/Libraries/glew/lib/Release/x64;%userprofile%/Desktop/Libraries/glfw/lib-vc2019;%userprofile%/Desktop/Libraries/FastNoise2/lib;D:\PDAL-master\build\lib\Debug;Libraries/tinymesh/build/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
