@@ -12,7 +12,7 @@ Fragmentation of vessels in the GPU, using OpenGL compute shaders. This project 
 
  <p align="center">
     <img src="assets/banner.png"/></br>
-    <em>Ensembled fragments of vessels.</em>
+    <em>Ensembled fragments of Iberian vessels.</em>
 </p>
 
 ## Dependencies
