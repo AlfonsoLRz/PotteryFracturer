@@ -1,4 +1,4 @@
-# VesselFracturer
+# Pottery fracturer
 
 ![c++](https://img.shields.io/github/languages/top/AlfonsoLRz/VesselFracturer) 
 ![opengl](https://img.shields.io/badge/opengl-4.5-red.svg) 
@@ -37,4 +37,6 @@ The project was originally intended to be used in Windows. The Microsoft Visual 
 - Language standard: `C++ 17`.
 - Integration with `vcpkg`. After cloning `vcpkg` and launching the main `.bat`, it can be integrated with MSVC by executing `vcpkg integrate install` in the command line (note that, `vcpkg` must be registered in the system path).
 
-## 
+## Linux
+
+TODO
